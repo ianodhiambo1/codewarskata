@@ -1,0 +1,20 @@
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+// Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+
+// Note: The function accepts an integer and returns an integer.
+
+// Happy Coding!
+
+function squareDigits(num) {
+  const digits = String(num).split('');
+  const squaredDigits = digits.map(digit => Math.pow(Number(digit), 2));
+  return Number(squaredDigits.join(''));
+}
+// The function first converts the input number into a string using String(num). Then it uses the split('') method to split the string into an array of individual digits.
+
+// Next, it uses the map() method to iterate over each digit in the array and applies the Math.pow() function to square each digit. The squared digits are stored in the squaredDigits array.
+
+// Finally, it uses join('') to concatenate the squared digits back into a string, and Number() to convert the resulting string back into a number. The final result is returned.
